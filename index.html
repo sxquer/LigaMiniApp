@@ -99,7 +99,7 @@
             Предоставить номер телефона
         </button>
 
-        <button id="callMe" class="btn-phone" onclick="callto:84232061520">
+        <button id="callMe" class="btn-phone" onclick="makePhoneCall(84232061520)">
             <span class="btn-icon">📱</span>
             Позвонить в сервисный отдел
         </button>
@@ -115,6 +115,10 @@
     </div>
 
     <script>
+
+        function makePhoneCall(phoneNumber) {
+  window.open('tel:' + phoneNumber, '_blank');
+}
         document.addEventListener('DOMContentLoaded', function() {
             // Инициализация Telegram Mini App
             const tg = window.Telegram.WebApp;
